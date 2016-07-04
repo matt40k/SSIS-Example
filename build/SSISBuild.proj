@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <Project  xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
          DefaultTargets="SSISBuild">
-  <UsingTask TaskName="DeploymentFileCompilerTask" AssemblyFile="C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PrivateAssemblies\Microsoft.SqlServer.IntegrationServices.Build.dll" />
+  <UsingTask TaskName="DeploymentFileCompilerTask" AssemblyFile="Microsoft.SqlServer.IntegrationServices.Build.dll" />
   
   <ItemGroup>
     <SSISProjPath Include="../SSIS-Example/SSIS-Example/SSIS-Example.dtproj"/>
   </ItemGroup>
   
   <Target Name="SSISBuild">
-    <Message Text="**************Building SSIS project: @(SSISProjPath) for configuration: $(CONFIGURATION)**************" />
+    <Message Text="**************Building SSIS project: @(SSISProjPath) for configuration: Development**************" />
     <DeploymentFileCompilerTask
      InputProject="@(SSISProjPath)"
      Configuration="Development"
