@@ -11,7 +11,7 @@
     <Message Text="**************Building SSIS project: @(SSISProjPath) for configuration: $(CONFIGURATION)**************" />
     <DeploymentFileCompilerTask
      InputProject="@(SSISProjPath)"
-     Configuration="$(CONFIGURATION)"
+     Configuration="Development"
      ProtectionLevel="DontSaveSensitive">
     </DeploymentFileCompilerTask>
   </Target>
